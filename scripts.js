@@ -15,3 +15,8 @@ document.getElementById("play-btn").addEventListener("click", function() {
 document.querySelector('.menu-button').addEventListener('click', function() {
     this.classList.toggle('active'); // Alterna la clase active para mostrar la "X"
 });
+
+document.querySelector('.menu-button').addEventListener('click', function() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+});
