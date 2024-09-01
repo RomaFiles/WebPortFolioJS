@@ -1,0 +1,90 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Cabecera fija */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente para la cabecera */
+    padding: 20px 40px;
+    box-shadow: none; /* Elimina la sombra de la cabecera */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo/Avatar */
+.logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* Contenedor de los botones Work/Play */
+.toggle-buttons {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+/* Botones Work/Play */
+.toggle-buttons a {
+    text-decoration: none;
+    color: #888;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin: 0 5px;
+}
+
+/* Estilo del botón activo */
+.toggle-buttons a.active {
+    background-color: #ffffff; /* Cambia el color de fondo al ser activo */
+    color: #333; /* Cambia el color del texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra */
+}
+
+/* Estilo del botón inactivo */
+.toggle-buttons a.inactive {
+    background-color: transparent; /* Fondo transparente para el botón inactivo */
+    color: #888; /* Color de texto más claro para el botón inactivo */
+}
+
+/* Botón del menú */
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent; /* Fondo transparente para el botón del menú */
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.menu-button:hover {
+    background-color: #ffffff;
+}
+
+/* Estilo cuando el botón está activo (transformado en una X) */
+.menu-button.active::before {
+    content: '×'; /* Símbolo de "X" */
+    font-size: 24px;
+    color: #333; /* Color del texto de la X */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
